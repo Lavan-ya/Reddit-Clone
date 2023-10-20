@@ -1,0 +1,21 @@
+.reddit-text{        
+    font-weight: 700;
+    height: 60px;
+    width: 60px; 
+    font-size: larger;
+    text-decoration: none;
+    padding: 10px;   
+}
+
+.header{
+    border-radius: 1px solid;
+    text-decoration: none;
+}
+
+.login,.sign-up{
+    border: 1px solid;
+    background-color: transparent;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
