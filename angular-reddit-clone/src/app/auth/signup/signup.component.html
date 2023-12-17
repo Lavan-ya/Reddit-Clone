@@ -15,11 +15,11 @@
            <div class="form-group">
             <div class="row justify-content-center">
             <div class="col-md-4 ">
-            <input type="text" [formControlName]="'name'" class="form-control" placeholder="name"/>
+            <input type="text" name='name' [formControlName]="'name'" class="form-control" placeholder="name"/>
             <span *ngIf="signupForm?.get('name')?.invalid && signupForm?.get('name')?.touched">Enter name</span><br><br>
-            <input type="text" [formControlName]="'password'" class="form-control"  placeholder="password"/>
+            <input type="text" name='password' [formControlName]="'password'" class="form-control"  placeholder="password"/>
             <span *ngIf="signupForm?.get('password')?.invalid&& signupForm?.get('password')?.touched">Enter password</span><br><br>
-            <input type="text" [formControlName]="'email'" class="form-control"  placeholder="email"/>
+            <input type="text" name='email' [formControlName]="'email'" class="form-control"  placeholder="email"/>
             <span *ngIf="signupForm?.get('email')?.invalid&& signupForm?.get('email')?.touched">Enter email</span><br><br> 
         </div>
         </div>

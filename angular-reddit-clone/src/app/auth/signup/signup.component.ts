@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SignupRequestPayload } from './signup-request.payload';
+import{AuthService} from '../shared/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -17,7 +18,7 @@ export class SignupComponent implements OnInit{
     email: new FormControl('',[Validators.email,Validators.required])
   })
 
-  constructor(){
+  constructor(private authService : AuthService){
   this.signupRequestPayload={
     name:'',
     password:'',
@@ -29,6 +30,10 @@ signup(){
   this.signupRequestPayload.name= this.signupForm.get('name')?.value;
   this.signupRequestPayload.password=this.signupForm.get('password')?.value;
   this.signupRequestPayload.email=this.signupForm.get('email')?.value;
+  this.authService.signup(this.signupRequestPayload).subscribe(data=>{
+    console.log(data);
+    alert("User created Successfully");
+  })
 }
 
 ngOnInit(): void {
