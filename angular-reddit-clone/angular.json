@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-reddit-clone:build:production"
+              "buildTarget": "angular-reddit-clone:build:production"
             },
             "development": {
-              "browserTarget": "angular-reddit-clone:build:development"
+              "buildTarget": "angular-reddit-clone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-reddit-clone:build"
+            "buildTarget": "angular-reddit-clone:build"
           }
         },
         "test": {

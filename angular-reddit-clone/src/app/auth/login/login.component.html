@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border border-5 rounded custom">
+                <div class="card-header text-center">
+                    <h4>Login</h4>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="loginFormGroup" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <input type="text" [formControlName]="'email'" class="form-control" placeholder="Email"/>
+                            <span *ngIf="loginFormGroup?.get('email')?.invalid && loginFormGroup?.get('email')?.touched">Enter a valid email</span><br>
+                            <input type="password" [formControlName]="'password'" class="form-control" placeholder="Password"/>
+                            <span *ngIf="loginFormGroup?.get('password')?.invalid && loginFormGroup?.get('password')?.touched">Enter a password</span><br>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

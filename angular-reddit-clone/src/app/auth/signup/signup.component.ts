@@ -20,19 +20,18 @@ export class SignupComponent implements OnInit{
 
   constructor(private authService : AuthService){
   this.signupRequestPayload={
-    name:'',
+    username:'',
     password:'',
     email:''
   }
 }
 
 signup(){
-  this.signupRequestPayload.name= this.signupForm.get('name')?.value;
+  this.signupRequestPayload.username = this.signupForm.get('name')?.value;
   this.signupRequestPayload.password=this.signupForm.get('password')?.value;
   this.signupRequestPayload.email=this.signupForm.get('email')?.value;
   this.authService.signup(this.signupRequestPayload).subscribe(data=>{
-    console.log(data);
-    alert("User created Successfully");
+    alert(data);
   })
 }
 
